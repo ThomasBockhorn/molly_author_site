@@ -4,12 +4,14 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use App\Http\Controllers\Book;
+use Illuminate\Validation\Rules;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Http\Request;
 use Symfony\Component\Debug\Exception\UndefinedFunctionException;
 use Mockery\Undefined;
+use phpDocumentor\Reflection\Types\Void_;
 
 class BookTest extends TestCase
 {
@@ -17,6 +19,14 @@ class BookTest extends TestCase
 
     private $item;
 
+    /**
+     * Setup for each test
+     */
+    public function setUp() : Void
+    {
+        parent::setUp();
+        $this->item = new Book;
+    }
     /**
      * This is the prototype entry for testing
      *
@@ -30,24 +40,12 @@ class BookTest extends TestCase
     ];
 
     /**
-     * Sets up the Book test
-     *
-     * @return void
-     */
-    public function bookTest()
-    {
-        $this->item = new Book;
-    }
-
-    /**
      * This test will see if an book entry is added
      *
      * @return void
      */
     public function testIfBookAddedHasATitle()
     {
-        $this->bookTest();
-
         //converts an array to a request
         $request = new Request($this->entry);
         $this->item->store($request);
@@ -58,10 +56,13 @@ class BookTest extends TestCase
      *
      * @return void
      */
-    /*public function testIfValidatorForAddingABookWorks()
+    public function testIfValidatorForAddingABookWorks()
     {
 
-    }*/
+        $validation = \Validator::make($this->entry, Book::$rules);
+
+        $this->assertTrue($validation->passes());
+    }
 
 
 }

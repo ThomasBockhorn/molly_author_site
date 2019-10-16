@@ -13,6 +13,15 @@ class Book extends Controller
     private $book;
 
     /**
+     * validation rules
+     */
+    public static $rules = [
+        'title' => 'required',
+        'author' => 'required',
+        'description' => 'required'
+    ];
+
+    /**
      * Constructor that sets up the book instance
      *
      * @return void
@@ -51,12 +60,16 @@ class Book extends Controller
      */
     public function store(Request $request)
     {
+        //This validates if the information was sent
+        $this->validate($request, book::$rules);
+
         //stores a new entry into the books database
         $this->book->title = $request->title;
         $this->book->author = $request->author;
         $this->book->author_id = $request->author_id;
         $this->book->description = $request->description;
 
+        //saves the entry
         $this->book->save();
     }
 
