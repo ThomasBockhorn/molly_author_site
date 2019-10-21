@@ -21,15 +21,6 @@ class BookTest extends TestCase
     private $item;
 
     /**
-     * Setup for each test
-     */
-    public function setUp() : Void
-    {
-        parent::setUp();
-        $this->item = new Book;
-    }
-
-    /**
      * This is the prototype entry for testing
      *
      */
@@ -42,6 +33,15 @@ class BookTest extends TestCase
     ];
 
     /**
+     * Setup for each test
+     */
+    public function setUp() : Void
+    {
+        parent::setUp();
+        $this->item = new Book;
+    }
+
+    /**
      * This test will see if an book entry is added
      *
      * @return void
@@ -51,6 +51,7 @@ class BookTest extends TestCase
         //converts an array to a request
         $request = new Request($this->entry);
         $this->item->store($request);
+
         $this->assertDatabaseHas('books', $this->entry);
     }
 
@@ -68,7 +69,7 @@ class BookTest extends TestCase
     }
 
     /**
-     * This tests if the data is deleted
+     * This tests if the data can be deleted
      *
      * @return void
      */
