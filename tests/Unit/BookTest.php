@@ -28,6 +28,7 @@ class BookTest extends TestCase
         parent::setUp();
         $this->item = new Book;
     }
+
     /**
      * This is the prototype entry for testing
      *
@@ -71,6 +72,21 @@ class BookTest extends TestCase
      *
      * @return void
      */
+    public function testIfABookEntryCanBeDeleted()
+    {
+        //Adds an entry
+        $request = new Request($this->entry);
+        $this->item->store($request);
+
+        //Gets an individual record
+        $test = Books::firstOrFail();
+
+        //Delete the record
+        $this->item->destroy($test->id);
+
+        //Sees if the database record is missing
+        $this->assertDatabaseMissing('books', $this->entry);
+    }
 
 
 
