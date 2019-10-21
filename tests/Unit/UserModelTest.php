@@ -15,18 +15,22 @@ class UserModelTest extends TestCase
     private $user;
 
     /**
-     * This is the prototype entry for testing
+     * Entry prototype for testing
      *
      */
-    public function setInfo()
-    {
-        $entry = [
-            'name' => 'Thomas',
-            'email' => 'thomas.bockhorn@tecktonet.com',
-            'password' => 'password'
-        ];
+    private $entry = [
+        'name' => 'Thomas',
+        'email' => 'thomas.bockhorn@tecktonet.com',
+        'password' => 'password'
+    ];
 
-        $this->user = User::create($entry);
+    /**
+     * Setup for each test
+     */
+    public function setUp() : Void
+    {
+        parent::setUp();
+        $this->user = User::create($this->entry);
     }
 
     /**
@@ -36,8 +40,6 @@ class UserModelTest extends TestCase
      */
     public function testUserHasNameAttribute()
     {
-        $this->setInfo();
-
         //assert user has a first name
         $this->assertEquals('Thomas', $this->user->name);
     }
@@ -49,8 +51,6 @@ class UserModelTest extends TestCase
      */
     public function testUserHasEmailAttribute()
     {
-        $this->setInfo();
-
         //assert user has a email
         $this->assertEquals('thomas.bockhorn@tecktonet.com', $this->user->email);
     }
@@ -62,8 +62,6 @@ class UserModelTest extends TestCase
      */
     public function testUserHasPasswordAttribute()
     {
-        $this->setInfo();
-
         //assort user has a password
         $this->assertEquals('password', $this->user->password);
     }
