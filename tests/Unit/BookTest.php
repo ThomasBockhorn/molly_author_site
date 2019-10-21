@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use App\Http\Controllers\Book;
+use App\Books;
 use Illuminate\Validation\Rules;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -36,7 +37,7 @@ class BookTest extends TestCase
         'title' => 'My First Book',
         'author' => 'Molly Felder',
         'author_id' => 1,
-        'description' => 'my very first book I love'
+        'description' => 'my very first book I love',
     ];
 
     /**
@@ -44,13 +45,14 @@ class BookTest extends TestCase
      *
      * @return void
      */
-    public function testIfBookAddedHasATitle()
+    public function testIfABookEntryExists()
     {
         //converts an array to a request
         $request = new Request($this->entry);
         $this->item->store($request);
         $this->assertDatabaseHas('books', $this->entry);
     }
+
     /**
      * This test to see if the validator works
      *
@@ -63,6 +65,13 @@ class BookTest extends TestCase
 
         $this->assertTrue($validation->passes());
     }
+
+    /**
+     * This tests if the data is deleted
+     *
+     * @return void
+     */
+
 
 
 }

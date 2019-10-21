@@ -16,9 +16,9 @@ class Book extends Controller
      * validation rules
      */
     public static $rules = [
-        'title' => 'required',
+        'title' => 'required | max:255',
         'author' => 'required',
-        'description' => 'required'
+        'description' => 'required',
     ];
 
     /**
@@ -115,6 +115,10 @@ class Book extends Controller
      */
     public function destroy($id)
     {
-        //
+        //gets the data of the particular id
+        $item = $this->book->findOrFail($id);
+
+        //Deletes it
+        $item->delete();
     }
 }
