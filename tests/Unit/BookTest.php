@@ -42,15 +42,25 @@ class BookTest extends TestCase
     }
 
     /**
+     * This function will add a demo entry to a database
+     *
+     * @return void
+     */
+    public function databaseSetup()
+    {
+        //adds an entry
+        $request = new Request($this->entry);
+        $this->item->store($request);
+    }
+
+    /**
      * This test will see if an book entry is added
      *
      * @return void
      */
     public function testIfABookEntryExists()
     {
-        //converts an array to a request
-        $request = new Request($this->entry);
-        $this->item->store($request);
+        $this->databaseSetup();
 
         $this->assertDatabaseHas('books', $this->entry);
     }
@@ -62,7 +72,7 @@ class BookTest extends TestCase
      */
     public function testIfValidatorForAddingABookWorks()
     {
-
+        //Gets the validation and sees if it passes
         $validation = \Validator::make($this->entry, Book::$rules);
 
         $this->assertTrue($validation->passes());
@@ -75,9 +85,8 @@ class BookTest extends TestCase
      */
     public function testIfABookEntryCanBeDeleted()
     {
-        //Adds an entry
-        $request = new Request($this->entry);
-        $this->item->store($request);
+        //Adds entry to database
+        $this->databaseSetup();
 
         //Gets an individual record
         $test = Books::firstOrFail();
@@ -89,6 +98,36 @@ class BookTest extends TestCase
         $this->assertDatabaseMissing('books', $this->entry);
     }
 
+    /**
+     * This test will check to see if the user can update a book entry
+     *
+     * @return void
+     */
+    public function testToSeeIfUserCanUpdateABookEntry()
+    {
+        //Adds entry to database
+        $this->databaseSetup();
+
+        //Gets the first entry
+        $test = Books::firstOrFail();
+
+        //Updated entry
+        $updatedEntry = [
+            'title' => 'My First Book',
+            'author' => 'Thomas Bockhorn',
+            'author_id' => 1,
+            'description' => 'my very first book I love',
+        ];
+
+        //Create a mock request
+        $updateRequest = new Request($updatedEntry);
+
+        //Updates Entry
+        $this->item->update($updateRequest, $test->id);
+
+        //Tests to see if update works
+        $this->assertDatabaseHas('books', $updatedEntry);
+    }
 
 
 }

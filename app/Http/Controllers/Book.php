@@ -104,7 +104,18 @@ class Book extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //Validates
+        $this->validate($request, book::$rules);
+
+        //Finds the record then updates it
+        $this->book->findOrFail($id);
+        $this->book->title = $request->title;
+        $this->book->author = $request->author;
+        $this->book->author_id = $request->author_id;
+        $this->book->description = $request->description;
+
+        //Saves entry
+        $this->book->save();
     }
 
     /**
