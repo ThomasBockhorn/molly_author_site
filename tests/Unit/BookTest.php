@@ -129,5 +129,16 @@ class BookTest extends TestCase
         $this->assertDatabaseHas('books', $updatedEntry);
     }
 
+    /**
+     * This test will check to see if the user can get to the index
+     *
+     * @return void
+     */
+    public function testToSeeIfTheUserCanSeeTheIndex()
+    {
+        $response = $this->get('/books/index');
+
+        $response->assertStatus(200);
+    }
 
 }

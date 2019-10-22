@@ -38,7 +38,8 @@ class Book extends Controller
      */
     public function index()
     {
-        //
+        //Retrieves data and binds it to the index page
+        return view('books.index');
     }
 
     /**
