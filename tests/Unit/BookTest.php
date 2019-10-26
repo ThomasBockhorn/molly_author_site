@@ -137,20 +137,8 @@ class BookTest extends TestCase
      */
     public function testToSeeIfTheUserCanSeeTheIndex()
     {
-        $response = $this->get('book/');
+        $response = $this->call('GET', 'book/');
 
-        $response->assertSuccessful();
-    }
-
-    /**
-     * This test will check to see if the user can see the data from index
-     *
-     * @return void
-     */
-    public function testToSeeIfDataIsBeingPassedToIndex()
-    {
-        $response = $this->call('GET', 'book');
-
-        $response->assertViewHas('book');
+        $this->assertEquals(200, $response->status());
     }
 }
