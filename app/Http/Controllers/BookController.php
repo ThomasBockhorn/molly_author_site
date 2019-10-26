@@ -64,7 +64,7 @@ class BookController extends Controller
     public function store(Request $request)
     {
         //This validates if the information was sent
-        $this->validate($request, book::$rules);
+        $this->validate($request, BookController::$rules);
 
         //stores a new entry into the books database
         $this->book->title = $request->title;
@@ -112,7 +112,7 @@ class BookController extends Controller
     public function update(Request $request, $id)
     {
         //Validates
-        $this->validate($request, book::$rules);
+        $this->validate($request, BookController::$rules);
 
         //Finds the record then updates it
         $this->book->findOrFail($id);
