@@ -24,7 +24,6 @@ class BookTest extends TestCase
      * This is the prototype entry for testing
      *
      */
-
     private $entry = [
         'title' => 'My First Book',
         'author' => 'Molly Felder',
@@ -38,6 +37,7 @@ class BookTest extends TestCase
     public function setUp() : Void
     {
         parent::setUp();
+
         $this->item = new Book;
     }
 
@@ -50,6 +50,7 @@ class BookTest extends TestCase
     {
         //adds an entry
         $request = new Request($this->entry);
+
         $this->item->store($request);
     }
 
@@ -139,6 +140,17 @@ class BookTest extends TestCase
         $response = $this->get('/books/index');
 
         $response->assertStatus(200);
+    }
+
+    /**
+     * This test will check to see if the user can see the data
+     *
+     * @return void
+     */
+    public function testToSeeIfDataIsBeingPassedToIndex()
+    {
+        $response = $this->call('GET', 'books');
+        $response->assertViewHas('books');
     }
 
 }

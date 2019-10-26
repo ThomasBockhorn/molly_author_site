@@ -38,8 +38,10 @@ class Book extends Controller
      */
     public function index()
     {
+        $books = Books::orderBy('id', 'desc');
+
         //Retrieves data and binds it to the index page
-        return view('books.index');
+        return view('books.index')->with('books', $books);
     }
 
     /**
