@@ -137,7 +137,7 @@ class BookTest extends TestCase
      */
     public function testToSeeIfTheUserCanSeeTheIndex()
     {
-        $response = $this->get('/books/index');
+        $response = $this->get('book/index');
 
         $response->assertStatus(200);
     }
@@ -149,8 +149,8 @@ class BookTest extends TestCase
      */
     public function testToSeeIfDataIsBeingPassedToIndex()
     {
-        $response = $this->call('GET', 'books');
-        $response->assertViewHas('books');
-    }
+        $response = $this->call('GET', 'book');
 
+        $response->assertViewHas('book');
+    }
 }

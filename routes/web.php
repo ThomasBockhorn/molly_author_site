@@ -22,4 +22,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 /**
  * These routes deal with Book entries
  */
-Route::resource('books', 'Book');
+Route::resource('book', 'Book');
