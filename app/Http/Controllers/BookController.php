@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Books;
 
-class Book extends Controller
+class BookController extends Controller
 {
     /**
      * private variable that defines the database entries
@@ -84,7 +84,11 @@ class Book extends Controller
      */
     public function show($id)
     {
+        //Use the model to get 1 record from the database
+        $oneBook = Books::findOrFail($id);
 
+        //Show the view and pass the record
+        return view('book.show')->with('oneBook', $oneBook);
     }
 
     /**

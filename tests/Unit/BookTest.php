@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use App\Http\Controllers\Book;
+use App\Http\Controllers\BookController;
 use App\Books;
 use Illuminate\Validation\Rules;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -38,7 +38,7 @@ class BookTest extends TestCase
     {
         parent::setUp();
 
-        $this->item = new Book;
+        $this->item = new BookController;
     }
 
     /**
@@ -74,7 +74,7 @@ class BookTest extends TestCase
     public function testIfValidatorForAddingABookWorks()
     {
         //Gets the validation and sees if it passes
-        $validation = \Validator::make($this->entry, Book::$rules);
+        $validation = \Validator::make($this->entry, BookController::$rules);
 
         $this->assertTrue($validation->passes());
     }
@@ -137,9 +137,9 @@ class BookTest extends TestCase
      */
     public function testToSeeIfTheUserCanSeeTheIndex()
     {
-        $response = $this->get('book/index');
+        $response = $this->get('book/');
 
-        $response->assertStatus(200);
+        $response->assertSuccessful();
     }
 
     /**
@@ -152,17 +152,5 @@ class BookTest extends TestCase
         $response = $this->call('GET', 'book');
 
         $response->assertViewHas('book');
-    }
-
-    /**
-     * This test will check to see if the user can see the book.show
-     *
-     * @return void
-     */
-    public function testToSeeIfUserCanSeeTheShowPage()
-    {
-        $response = $this->get('book/show');
-
-        $response->assertStatus(200);
     }
 }
