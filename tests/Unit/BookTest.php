@@ -143,7 +143,7 @@ class BookTest extends TestCase
     }
 
     /**
-     * This test will check to see if the user can see the data
+     * This test will check to see if the user can see the data from index
      *
      * @return void
      */
@@ -152,5 +152,17 @@ class BookTest extends TestCase
         $response = $this->call('GET', 'book');
 
         $response->assertViewHas('book');
+    }
+
+    /**
+     * This test will check to see if the user can see the book.show
+     *
+     * @return void
+     */
+    public function testToSeeIfUserCanSeeTheShowPage()
+    {
+        $response = $this->get('book/show');
+
+        $response->assertStatus(200);
     }
 }
