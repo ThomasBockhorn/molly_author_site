@@ -140,5 +140,27 @@ class BookTest extends TestCase
         $response = $this->call('GET', 'book/');
 
         $this->assertEquals(200, $response->status());
+
+        $response->assertViewHas('book');
+    }
+
+    /**
+     * This test will check to see if the user can see the show page
+     *
+     * @return void
+     */
+    public function testToSeeIfTheUserCanSeeTheShow()
+    {
+        //sets up database
+        $this->databaseSetup();
+
+        //Gets the first entry
+        $test = Books::firstOrFail();
+
+        //Gets the response
+        $response = $this->get(route('book.show', ['id' => $test->id]));
+
+        //Sees if the response is 200
+        $this->assertEquals(200, $response->status());
     }
 }
