@@ -32,6 +32,19 @@ class BookController extends Controller
     }
 
     /**
+     * This protected function adds the data to the database
+     *
+     * @return void
+     */
+    protected function addValue($request)
+    {
+        $this->book->title = $request->title;
+        $this->book->author = $request->author;
+        $this->book->author_id = $request->author_id;
+        $this->book->description = $request->description;
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -66,10 +79,7 @@ class BookController extends Controller
         $this->validate($request, BookController::$rules);
 
         //stores a new entry into the books database
-        $this->book->title = $request->title;
-        $this->book->author = $request->author;
-        $this->book->author_id = $request->author_id;
-        $this->book->description = $request->description;
+        $this->addValue($request);
 
         //saves the entry
         $this->book->save();
@@ -119,10 +129,9 @@ class BookController extends Controller
 
         //Finds the record then updates it
         $this->book->findOrFail($id);
-        $this->book->title = $request->title;
-        $this->book->author = $request->author;
-        $this->book->author_id = $request->author_id;
-        $this->book->description = $request->description;
+
+        //stores a new entry into the books database
+        $this->addValue($request);
 
         //Saves entry
         $this->book->save();
