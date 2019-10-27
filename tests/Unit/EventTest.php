@@ -57,10 +57,23 @@ class EventTest extends TestCase
      *
      * @return void
      */
-    public function testIfABookEntryExists()
+    public function testIfAEventEntryExists()
     {
         $this->databaseSetup();
 
         $this->assertDatabaseHas('events', $this->entry);
+    }
+
+    /**
+     * This test to see if the validator works
+     *
+     * @return void
+     */
+    public function testIfValidatorForAddingAEventWorks()
+    {
+        //Gets the validation and sees if it passes
+        $validation = \Validator::make($this->entry, EventsController::$rules);
+
+        $this->assertTrue($validation->passes());
     }
 }
