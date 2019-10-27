@@ -115,7 +115,17 @@ class EventsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //Validates
+        $this->validate($request, EventsController::$rules);
+
+        //Finds the record then updates it
+        $this->event->findOrFail($id);
+
+        //stores a new entry into the books database
+        $this->addValue($request);
+
+        //Saves entry
+        $this->event->save();
     }
 
     /**

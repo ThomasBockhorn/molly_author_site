@@ -27,7 +27,7 @@ class EventTest extends TestCase
         'location' => '113 Sweet Hollow Way',
         'description' => 'First Book signing',
         'event_date' => 'November 1',
-        'event_time' => 'pm'
+        'event_time' => '2pm'
     ];
 
     /**
@@ -83,7 +83,7 @@ class EventTest extends TestCase
      *
      * @return void
      */
-    public function testIfABookEntryCanBeDeleted()
+    public function testIfEventEntryCanBeDeleted()
     {
         //Adds entry to database
         $this->databaseSetup();
@@ -96,5 +96,37 @@ class EventTest extends TestCase
 
         //Sees if the database record is missing
         $this->assertDatabaseMissing('events', $this->entry);
+    }
+
+    /**
+     * This test will check to see if the user can update a book entry
+     *
+     * @return void
+     */
+    public function testToSeeIfUserCanUpdateAnEventEntry()
+    {
+        //Adds entry to database
+        $this->databaseSetup();
+
+        //Gets the first entry
+        $test = Events::firstOrFail();
+
+        //Updated entry
+        $updatedEntry = [
+            'event_title' => 'My First Event',
+            'location' => '113 Sweet Hollow Way',
+            'description' => 'First Book signing',
+            'event_date' => 'November 30',
+            'event_time' => '2pm'
+        ];
+
+        //Create a mock request
+        $updateRequest = new Request($updatedEntry);
+
+        //Updates Entry
+        $this->event->update($updateRequest, $test->id);
+
+        //Tests to see if update works
+        $this->assertDatabaseHas('events', $updatedEntry);
     }
 }
