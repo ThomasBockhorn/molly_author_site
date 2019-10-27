@@ -126,6 +126,8 @@ class EventsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $single_event = $this->event->findOrFail($id);
+
+        $single_event->delete();
     }
 }

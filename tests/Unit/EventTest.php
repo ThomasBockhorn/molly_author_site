@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
+use App\Events;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -75,5 +76,25 @@ class EventTest extends TestCase
         $validation = \Validator::make($this->entry, EventsController::$rules);
 
         $this->assertTrue($validation->passes());
+    }
+
+    /**
+     * This tests if the data can be deleted
+     *
+     * @return void
+     */
+    public function testIfABookEntryCanBeDeleted()
+    {
+        //Adds entry to database
+        $this->databaseSetup();
+
+        //Gets an individual record
+        $test = Events::firstOrFail();
+
+        //Delete the record
+        $this->event->destroy($test->id);
+
+        //Sees if the database record is missing
+        $this->assertDatabaseMissing('events', $this->entry);
     }
 }
