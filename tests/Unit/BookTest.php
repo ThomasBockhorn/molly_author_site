@@ -163,4 +163,17 @@ class BookTest extends TestCase
         //Sees if the response is 200
         $this->assertEquals(200, $response->status());
     }
+
+    /**
+     * This test will see if create form shows up to the user
+     *
+     * @return void
+     */
+    public function testToSeeIfTheUserCanSeeTheEditForm()
+    {
+        $response = $this->get(route('book.create'));
+
+        //Sees if the response is 200
+        $this->assertEquals(200, $response->status());
+    }
 }
