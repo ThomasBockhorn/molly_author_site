@@ -20,6 +20,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 /**
- * These routes deal with Book entries
+ * Pertains to the book/ routes
  */
 Route::resource('/book', 'BookController');
+
+/**
+ * Pertains to the event/ routes
+ */
+Route::resource('/event', 'EventsController');
