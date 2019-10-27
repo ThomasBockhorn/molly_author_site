@@ -66,7 +66,7 @@ class EventsController extends Controller
      */
     public function create()
     {
-        //
+        return view('events.create');
     }
 
     /**
@@ -110,7 +110,11 @@ class EventsController extends Controller
      */
     public function edit($id)
     {
-        //
+         //Use the model to get 1 record from the database
+        $oneEvent = Events::findOrFail($id);
+
+         //Show the view and pass the record
+        return view('events.edit')->with('oneEvent', $oneEvent);
     }
 
     /**
