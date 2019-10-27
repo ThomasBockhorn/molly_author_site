@@ -51,8 +51,7 @@ class BookController extends Controller
      */
     public function create()
     {
-
-
+        return view('book.create');
     }
 
     /**
@@ -99,7 +98,11 @@ class BookController extends Controller
      */
     public function edit($id)
     {
-        //
+        //Use the model to get 1 record from the database
+        $oneBook = Books::findOrFail($id);
+
+        //Show the view and pass the record
+        return view('book.edit')->with('oneBook', $oneBook);
     }
 
     /**

@@ -169,11 +169,31 @@ class BookTest extends TestCase
      *
      * @return void
      */
-    public function testToSeeIfTheUserCanSeeTheEditForm()
+    public function testToSeeIfTheUserCanSeeTheCreateForm()
     {
         $response = $this->get(route('book.create'));
 
         //Sees if the response is 200
+        $this->assertEquals(200, $response->status());
+    }
+
+    /**
+     * This test will see if the user can edit an entry
+     *
+     * @return void
+     */
+    public function testToSeeIfTheUserCanSeeTheEditForm()
+    {
+         //sets up database
+        $this->databaseSetup();
+
+         //Gets the first entry
+        $test = Books::firstOrFail();
+
+         //Gets the response
+        $response = $this->get(route('book.edit', ['id' => $test->id]));
+
+         //Sees if the response is 200
         $this->assertEquals(200, $response->status());
     }
 }
