@@ -6,6 +6,8 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use App\Http\Controllers\EventsController;
+use Illuminate\Http\Request;
 
 class EventTest extends TestCase
 {
@@ -19,5 +21,46 @@ class EventTest extends TestCase
     /**
      * Global array that provides a prototype entry for event
      */
-    private $entry = [];
+    private $entry = [
+        'event_title' => 'My First Event',
+        'location' => '113 Sweet Hollow Way',
+        'description' => 'First Book signing',
+        'event_date' => 'November 1',
+        'event_time' => 'pm'
+    ];
+
+    /**
+     * Setup for each test
+     */
+    public function setUp() : Void
+    {
+        parent::setUp();
+
+        $this->event = new EventsController;
+    }
+
+    /**
+     * This function will add a demo entry to a database
+     *
+     * @return void
+     */
+    public function databaseSetup()
+    {
+        //adds an entry
+        $request = new Request($this->entry);
+
+        $this->event->store($request);
+    }
+
+    /**
+     * This test will see if an book entry is added
+     *
+     * @return void
+     */
+    public function testIfABookEntryExists()
+    {
+        $this->databaseSetup();
+
+        $this->assertDatabaseHas('events', $this->entry);
+    }
 }

@@ -13,13 +13,13 @@ class CreateEventListing extends Migration
      */
     public function up()
     {
-        Schema::create('event_listing', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('event_title');
             $table->string('location');
             $table->text('description');
-            $table->date('event_date');
-            $table->time('event_time');
+            $table->string('event_date');
+            $table->string('event_time');
             $table->timestamps();
         });
     }
