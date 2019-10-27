@@ -99,7 +99,7 @@ class EventTest extends TestCase
     }
 
     /**
-     * This test will check to see if the user can update a book entry
+     * This test will check to see if the user can update an event entry
      *
      * @return void
      */
@@ -129,4 +129,19 @@ class EventTest extends TestCase
         //Tests to see if update works
         $this->assertDatabaseHas('events', $updatedEntry);
     }
+
+    /**
+     * This test will check to see if the user can get to the index
+     *
+     * @return void
+     */
+    public function testToSeeIfTheUserCanSeeTheIndex()
+    {
+        $response = $this->call('GET', 'events/');
+
+        $this->assertEquals(200, $response->status());
+
+        $response->assertViewHas('events');
+    }
+
 }

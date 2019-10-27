@@ -53,7 +53,10 @@ class EventsController extends Controller
      */
     public function index()
     {
-        //
+        $events = Events::orderBy('id', 'desc');
+
+        //Retrieves data and binds it to the index page
+        return view('events.index')->with('events', $events);
     }
 
     /**

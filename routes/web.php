@@ -27,4 +27,4 @@ Route::resource('/book', 'BookController');
 /**
  * Pertains to the event/ routes
  */
-Route::resource('/event', 'EventsController');
+Route::resource('/events', 'EventsController');
