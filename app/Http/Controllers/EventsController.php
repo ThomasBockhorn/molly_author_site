@@ -95,7 +95,11 @@ class EventsController extends Controller
      */
     public function show($id)
     {
-        //
+        //Use the model to get 1 record from the database
+        $oneEvent = Events::findOrFail($id);
+
+        //Show the view and pass the record
+        return view('events.show')->with('oneEvent', $oneEvent);
     }
 
     /**

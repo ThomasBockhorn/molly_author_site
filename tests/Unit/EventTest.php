@@ -144,4 +144,25 @@ class EventTest extends TestCase
         $response->assertViewHas('events');
     }
 
+    /**
+     * This test will check to see if the user can see the show page
+     *
+     * @return void
+     */
+    public function testToSeeIfTheUserCanSeeTheShow()
+    {
+       //sets up database
+        $this->databaseSetup();
+
+       //Gets the first entry
+        $test = Events::firstOrFail();
+
+       //Gets the response
+        $response = $this->get(route('events.show', ['id' => $test->id]));
+
+       //Sees if the response is 200
+        $this->assertEquals(200, $response->status());
+    }
+
+
 }
