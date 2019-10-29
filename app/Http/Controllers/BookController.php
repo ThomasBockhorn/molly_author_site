@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Books;
+use Illuminate\Support\Facades\Storage;
 
 class BookController extends Controller
 {
     /**
-     * private variable that defines the database entries
+     * private variables that defines the database entries
      */
     private $book;
 

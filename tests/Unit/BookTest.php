@@ -117,7 +117,7 @@ class BookTest extends TestCase
             'title' => 'My First Book',
             'author' => 'Thomas Bockhorn',
             'author_id' => 1,
-            'description' => 'my very first book I love',
+            'description' => 'my very first book I love'
         ];
 
         //Create a mock request

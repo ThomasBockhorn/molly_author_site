@@ -46,6 +46,7 @@ class EventsController extends Controller
         $this->event->event_date = $request->event_date;
         $this->event->event_time = $request->event_time;
     }
+
     /**
      * Display a listing of the resource.
      *
