@@ -28,7 +28,7 @@ class BookTest extends TestCase
         'title' => 'My First Book',
         'author' => 'Molly Felder',
         'author_id' => 1,
-        'description' => 'my very first book I love',
+        'description' => 'my very first book I love'
     ];
 
     /**

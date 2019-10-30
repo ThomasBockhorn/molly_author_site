@@ -20,6 +20,7 @@ class BookController extends Controller
         'title' => 'required | max:255',
         'author' => 'required',
         'description' => 'required',
+        'image_id' => 'nullable'
     ];
 
     /**

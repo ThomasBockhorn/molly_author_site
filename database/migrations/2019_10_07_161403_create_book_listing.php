@@ -16,7 +16,7 @@ class CreateBookListing extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->unsignedBigInteger('image_id');
+            $table->unsignedBigInteger('image_id')->nullable();
             $table->text('description');
             $table->string('author');
             $table->bigInteger('author_id');
