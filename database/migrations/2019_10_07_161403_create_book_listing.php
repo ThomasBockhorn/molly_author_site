@@ -24,7 +24,7 @@ class CreateBookListing extends Migration
 
             $table->foreign('image_id')
                 ->references('id')
-                ->on('imageFiles')
+                ->on('images')
                 ->onDelete('cascade');
         });
     }

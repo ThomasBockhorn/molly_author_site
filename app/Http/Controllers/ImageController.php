@@ -3,9 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Images;
 
 class ImageController extends Controller
 {
+    /**
+     * Global variable
+     */
+    private $image;
+
+    /**
+     * constructor that initiates a new image
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->image = new Images;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -34,7 +50,9 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->image->image = $request->image;
+
+        $this->image->save();
     }
 
     /**

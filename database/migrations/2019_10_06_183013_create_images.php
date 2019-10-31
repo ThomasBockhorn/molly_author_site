@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFileImages extends Migration
+class CreateImages extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateFileImages extends Migration
      */
     public function up()
     {
-        Schema::create('imageFiles', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('image');
             $table->timestamps();
