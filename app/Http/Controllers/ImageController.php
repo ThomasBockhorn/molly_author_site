@@ -13,6 +13,13 @@ class ImageController extends Controller
     private $image;
 
     /**
+     * Validation
+     */
+    public static $imageValidation = [
+        'image' => 'nullable|image|max:1999'
+    ];
+
+    /**
      * constructor that initiates a new image
      *
      * @return void
@@ -50,6 +57,9 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
+        //This validates if the information was sent
+        //$this->validate($request, ImageController::$imageValidation);
+
         $this->image->image = $request->image;
 
         $this->image->save();
