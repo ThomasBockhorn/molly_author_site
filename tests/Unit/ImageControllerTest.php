@@ -42,7 +42,8 @@ class ImageControllerTest extends TestCase
     }
 
     /**
-     * This test will see if the image reference gets added to database
+     * This test will see if the image reference gets added to database.
+     * This test will also consequently check if the validation work.
      *
      * @return void
      */
@@ -52,5 +53,4 @@ class ImageControllerTest extends TestCase
 
         $this->assertDatabaseHas('images', $this->testRequest);
     }
-
 }

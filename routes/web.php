@@ -28,3 +28,8 @@ Route::resource('/book', 'BookController');
  * Pertains to the event/ routes
  */
 Route::resource('/events', 'EventsController');
+
+/**
+ * Routes for the image Controller
+ */
+Route::resource('/image', 'ImageController')->except(['index', 'create', 'show', 'edit']);
