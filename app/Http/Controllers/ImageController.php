@@ -65,6 +65,7 @@ class ImageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $image = $this->image->findOrFail($id);
+        $image->delete();
     }
 }

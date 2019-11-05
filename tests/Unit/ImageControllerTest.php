@@ -53,4 +53,24 @@ class ImageControllerTest extends TestCase
 
         $this->assertDatabaseHas('images', $this->testRequest);
     }
+
+    /**
+     * This will test if the image reference gets deleted
+     *
+     * @return void
+     */
+    public function testToSeeIfImageReferenceGetsDeletedFromDatabase()
+    {
+        //Adding the image to database
+        $this->image->store($this->response);
+
+        //Getting the image from database
+        $example = Images::firstOrFail();
+
+        //destroying the image
+        $this->image->destroy($example->id);
+
+        //checking to see if its missing
+        $this->assertDatabaseMissing('images', $this->testRequest);
+    }
 }
