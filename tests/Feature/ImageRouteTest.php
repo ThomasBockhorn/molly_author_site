@@ -15,4 +15,25 @@ class ImageRouteTest extends TestCase
         $response = $this->get('ImageController@index');
         $response->assertNotFound($response);
     }
+
+    //This test will check to see if the ImageController Index doesn't exits
+    public function testToSeeIfImageControllerCreateDoesntExist()
+    {
+        $response = $this->get('ImageController@create');
+        $response->assertNotFound($response);
+    }
+
+    //This test will check to see if the ImageController Index doesn't exits
+    public function testToSeeIfImageControllerShowDoesntExist()
+    {
+        $response = $this->get('ImageController@show');
+        $response->assertNotFound($response);
+    }
+
+    //This test will check to see if the ImageController Index doesn't exits
+    public function testToSeeIfImageControllerEditDoesntExist()
+    {
+        $response = $this->get('ImageController@edit');
+        $response->assertNotFound($response);
+    }
 }
