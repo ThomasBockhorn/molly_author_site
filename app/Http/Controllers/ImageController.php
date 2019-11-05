@@ -54,7 +54,14 @@ class ImageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //This validates if the information was sent
+        $this->validate($request, ImageController::$imageValidation);
+
+        $this->image->findOrFail($id);
+
+        $this->image->image = $request->image;
+
+        $this->image->save();
     }
 
     /**

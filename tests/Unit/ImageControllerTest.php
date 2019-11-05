@@ -73,4 +73,31 @@ class ImageControllerTest extends TestCase
         //checking to see if its missing
         $this->assertDatabaseMissing('images', $this->testRequest);
     }
+
+    /**
+     * This test will check to see if an image reference in the database can be swapped
+     *
+     * @return void
+     */
+    public function testToSeeIfImageReferenceCanBeSwappedWithAnotherImageReference()
+    {
+        //Creates a simulated image file from a fake file in resources/test
+        $exampleImage2 = new File(resource_path('tests/resources/testfile2.jpg'));
+
+        //Create a new request
+        $testRequest2 = [
+            'image' => $exampleImage2
+        ];
+
+        $response = new Request($testRequest2);
+
+        //Gets the current id
+        $this->image->store($this->response);
+        $example = Images::firstOrFail();
+
+        //Updates the image
+        $this->image->update($response, $example->id);
+
+        $this->assertDatabaseHas('images', $testRequest2);
+    }
 }
