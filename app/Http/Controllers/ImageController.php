@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Images;
 
 class ImageController extends Controller
@@ -43,6 +44,7 @@ class ImageController extends Controller
         $this->image->image = $request->image;
 
         $this->image->save();
+
     }
 
     /**

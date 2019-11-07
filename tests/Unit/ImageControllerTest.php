@@ -11,6 +11,7 @@ use App\Images;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ImageController;
+use Illuminate\Http\UploadedFile;
 
 class ImageControllerTest extends TestCase
 {
