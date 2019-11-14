@@ -15,20 +15,20 @@
  <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ asset('css/plugins/bootstrap/css/bootstrap.min.css')}}">
   <!-- Animate Css -->
-  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <link rel="stylesheet" href="{{ asset('css/plugins/animate-css/animate.css')}}">
   <!-- Themify icon Css -->
-  <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
-  <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+  <link rel="stylesheet" href="{{ asset('css/plugins/themify/css/themify-icons.css')}}">
+  <link rel="stylesheet" href="{{ asset('css/plugins/magnific-popup/magnific-popup.css')}}">
   <!-- Slick Carousel CSS -->
-  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
-  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
-  <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.min.css">
-  <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="{{ asset('css/plugins/slick-carousel/slick/slick.css')}}">
+  <link rel="stylesheet" href="{{ asset('css/plugins/slick-carousel/slick/slick-theme.css')}}">
+  <link rel="stylesheet" href="{{ asset('css/plugins/owl-carousel/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('css/plugins/owl-carousel/owl.theme.default.min.css')}}">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 
 </head>
 
@@ -772,16 +772,16 @@
 
 
     <!-- Main jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="{{ asset('css/plugins/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap 3.1 -->
-    <script src="plugins/bootstrap/js/popper.min.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="{{ asset('css/plugins/bootstrap/js/popper.min.js')}}"></script>
+    <script src="{{ asset('css/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('css/plugins/owl-carousel/owl.carousel.min.js')}}"></script>
     <!-- Slick Slider -->
-    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
-    <script src="plugins/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="{{ asset('css/plugins/slick-carousel/slick/slick.min.js')}}"></script>
+    <script src="{{ asset('css/plugins/magnific-popup/jquery.magnific-popup.js')}}"></script>
     <script src="js/contact.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="{{ asset('js/theme.js')}}"></script>
 
   </body>
   </html>
