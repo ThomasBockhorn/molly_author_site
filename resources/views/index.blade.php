@@ -1,7 +1,6 @@
-@include('layouts/app')
-@include('layouts/nav')
+@extends('layouts/app')
 
-
+@section('content')
 <!-- Banner -->
 <section class="banner-main py-7" id="banner">
     <div class="container">
@@ -9,52 +8,20 @@
             <div class="col-lg-7 col-md-12">
                 <div class="main-banner">
                     <h1 class="mb-2">
-                       The Man in the <br>Glass House
+                        Henry<br>the Boy
                     </h1>
 
-                    <p class="lead">A great landing page to sell your eBook!</p>
+                    <p class="lead"><i>Henry the Boy</i> is my debut picture book about a boy who sees himself differently than some kids at school see him—even his best friend, Joel!</p>
 
-                    <p class="mb-3 mt-4">We work with our partners to streamline project plans that don’t just deliver on product perfection, but also delivers on time.</p>
-
-                    <a href="#" target="_blank" class="btn btn-main-2 mt-2">
-                        Buy now for <i class="ti-check mr-2 ml-2"></i> $14.99
-                    </a>
-                    <p class="mt-4">* eBook includes iBooks, PDF & ePub versions</p>
+                    <p class="mb-3 mt-4">Henry walks with forearm crutches covered in animal stickers. At first, he loves the way the crutches make him feel. When that changes, he takes comfort in friendship and in Joel’s gift to him.
+                        Buy the book from my wonderful small publisher,
+                        <a href="https://www.pennycandybooks.com/shop/henry-the-boy">Penny Candy Books</a>, or the all-powerful <a href="https://www.amazon.com/Henry-Boy-Molly-Felder/dp/0999658409/">Amazon!</a>
+                    </p>
                 </div>
             </div>
              <div class="col-lg-5 d-none d-lg-block">
                 <div class="banner-img">
-                    <img src="images/about/book.png" alt="" class="img-fluid w-100">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="featured-client section-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="text-center border p-4">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4">
-                             <span class="h5">Featured by companies like:</span>
-                        </div>
-                        <div class="col-lg-2">
-                            <img src="images/client/client-1.png" alt="" class="img-fluid">
-                        </div>
-
-                        <div class="col-lg-2">
-                            <img src="images/client/client-2.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-2">
-                            <img src="images/client/client-3.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-lg-2">
-                            <img src="images/client/client-4.png" alt="" class="img-fluid">
-                        </div>
-                    </div>
+                    <img src="{{ asset('images/bookFront.jpg')}}" alt="Henry the Boy front cover" class="img-fluid w-100">
                 </div>
             </div>
         </div>
@@ -68,26 +35,17 @@
 		<div class="row">
 			<div class="col-lg-5 col-md-6">
 				<div class="book-preview">
-					<img src="images/about/kindle.png" class="background-device img-fluid" alt="">
+					<img src="{{ asset('images/walk.jpg')}}" class="background-device img-fluid" alt="">
 					<div class="owl-book owl-carousel owl-theme" style="opacity: 1; display: block;">
 						<div class="book-item">
-							<img src="images/about/book_page.png" alt="" class="img-fluid">
 							<div class="overlay">
-								<a href="images/about/book_page.png" class="popup-gallery img-fluid" data-title="Image Caption"><i class="ti-fullscreen"></i></a>
+								<a href="{{ asset('images/walk.jpg')}}" class="popup-gallery img-fluid" data-title="Image Caption"><i class="ti-fullscreen"></i></a>
 							</div>
 						</div>
 
 						<div class="book-item">
-							<img src="images/about/book_page2.png" alt="" class="img-fluid">
 							<div class="overlay">
-								<a href="images/about/book_page2.png" class="popup-gallery img-fluid" data-title="Image Caption"><i class="ti-fullscreen"></i></a>
-							</div>
-						</div>
-
-						<div class="book-item">
-							<img src="images/about/book_page.png" alt="" class="img-fluid">
-							<div class="overlay">
-								<a href="images/about/book_page.png" class="popup-gallery img-fluid" data-title="Image Caption"><i class="ti-fullscreen"></i></a>
+								<a href="{{ asset('images/roll.jpg')}}" class="popup-gallery img-fluid" data-title="Image Caption"><i class="ti-fullscreen"></i></a>
 							</div>
 						</div>
 					</div>
@@ -652,27 +610,4 @@
 <a class="scroll-to-top smoth-scroll" href="#top-header">
     <i class="ti-angle-up"></i>
 </a>
-
-
-
-
-
-    <!--
-    Essential Scripts
-    =====================================-->
-
-
-    <!-- Main jQuery -->
-    <script src="{{ asset('css/plugins/jquery/jquery.min.js')}}"></script>
-    <!-- Bootstrap 3.1 -->
-    <script src="{{ asset('css/plugins/bootstrap/js/popper.min.js')}}"></script>
-    <script src="{{ asset('css/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('css/plugins/owl-carousel/owl.carousel.min.js')}}"></script>
-    <!-- Slick Slider -->
-    <script src="{{ asset('css/plugins/slick-carousel/slick/slick.min.js')}}"></script>
-    <script src="{{ asset('css/plugins/magnific-popup/jquery.magnific-popup.js')}}"></script>
-    <script src="js/contact.js"></script>
-    <script src="{{ asset('js/theme.js')}}"></script>
-
-  </body>
-  </html>
+@endsection
