@@ -11,52 +11,8 @@
 <!--reviews-->
 @include('sections/reviews/reviews')
 
-
-
 <!-- About Author -->
-<section class="about section" id="author">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5">
-                <div class="about-img">
-                    <img src="images/about/authorimg.jpg" alt="" class="img-fluid w-100">
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="author-info pl-4 mt-5 mt-lg-0">
-                    <span>Know More About Author</span>
-                    <h2 class="text-lg">Yasin Arafat <span class="text-sm">- Technical Writer</span></h2>
-
-                    <p class="mb-4 mt-3">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. et inventore dicta quos ducimus, consectetur culpa dolore quisquam ipsum facere, fugiat. Corporis eaque, sint.</p>
-                    <img src="images/about/2.png" alt="" class="img-fluid">
-
-
-                    <div class="follow mt-5">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><span class="mb-3">Follow Me :</span></li>
-                            <li class="list-inline-item">
-                                <a href="#"><i class="ti-facebook"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#"><i class="ti-twitter"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#"><i class="ti-linkedin"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#"><i class="ti-pinterest"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#"><i class="ti-github"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include('sections/author/author')
 
 <!-- Others books -->
 <section class="section-bottom others-book">

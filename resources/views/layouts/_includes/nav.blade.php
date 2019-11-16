@@ -35,6 +35,12 @@
                         </li>
 
                         <li class="nav-item ">
+                                <a href="#author" class="nav-link smoth-scroll">
+                                    About Me
+                                </a>
+                            </li>
+
+                        <li class="nav-item ">
                             <a href="#contact" class="nav-link smoth-scroll">
                                 Contact
                             </a>
