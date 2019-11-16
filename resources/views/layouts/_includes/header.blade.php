@@ -6,11 +6,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Influencer - Book landing template">
-  <meta name="keywords" content="Influencer,creative, agency, startup,onepage, clean, modern,business, company,it">
+  <meta name="keywords" content="Henry the Boy, Molly Felder, author, disability, friendship">
 
-  <meta name="author" content="dreambuzz">
+  <meta name="author" content="Molly Felder">
 
-  <title>Treaser-Book Landing Template</title>
+  <title>Molly Felder Author</title>
 
  <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
@@ -30,5 +30,7 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/791afc6e4d.js" crossorigin="anonymous"></script>
 </head>
 

@@ -346,10 +346,6 @@ a:focus {
     text-transform: capitalize;
 }
 
-.navbar-nav .nav-link.active {
-    color: #cc302b !important;
-}
-
 .navbar {
     position: relative;
     padding: 1rem 1rem;

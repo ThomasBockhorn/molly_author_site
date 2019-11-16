@@ -8,33 +8,8 @@
 <!--book preview-->
 @include('sections/bookPreview/bookPreview')
 
-<section class="service" id="features">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="service-block mb-4 mb-lg-0 bg-grey">
-                    <i class="ti-microphone text-danger"></i>
-                    <h5 class="mb-3 mt-4">Experience</h5>
-                    <p class="mb-0">Must explain to you how this denouncing praisig pain was give you explain to you how…</p>
-                </div>
-            </div>
-             <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="service-block mb-4 mb-lg-0 bg-grey">
-                    <i class="ti-rocket text-success"></i>
-                    <h5 class="mb-3 mt-4">Marketing Goals</h5>
-                    <p class="mb-0">Must explain to you how this denouncing praisig pain was give you explain to you how…</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                 <div class="service-block mb-4 mb-lg-0 bg-grey">
-                    <i class="ti-email text-warning"></i>
-                    <h5 class="mb-3 mt-4">Targetting Vission</h5>
-                    <p class="mb-0">Must explain to you how this denouncing praisig pain was give you explain to you how…</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!--reviews-->
+@include('sections/reviews/reviews')
 
 <!-- Chapter -->
 <section class="section chapter" id="chapter">
@@ -124,7 +99,7 @@
 	</div>
 </section>
 <!-- Review-->
-<div class="section bg-grey " data-aos="fade-up" id="reviews">
+<div class="section bg-grey " data-aos="fade-up" id="">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 text-center">
