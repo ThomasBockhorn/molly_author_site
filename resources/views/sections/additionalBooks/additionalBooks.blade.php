@@ -1,4 +1,4 @@
-<section class="section-bottom others-book">
+<section class="section-bottom others-book" id="additionalBooks">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">

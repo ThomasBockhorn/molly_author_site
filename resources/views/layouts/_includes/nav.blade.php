@@ -35,10 +35,22 @@
                         </li>
 
                         <li class="nav-item ">
-                                <a href="#author" class="nav-link smoth-scroll">
-                                    About Me
-                                </a>
-                            </li>
+                            <a href="#author" class="nav-link smoth-scroll">
+                                About Me
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a href="#additionalBooks" class="nav-link smoth-scroll">
+                                More Books
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a href="#events" class="nav-link smoth-scroll">
+                                Events
+                            </a>
+                        </li>
 
                         <li class="nav-item ">
                             <a href="#contact" class="nav-link smoth-scroll">
