@@ -18,52 +18,7 @@
 @include('sections/author/author')
 
 <!-- Others books -->
-<section class="section-bottom others-book">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="pb-4">
-					<h2>Others books by the author</h2>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="book-item mb-4 mb-lg-0">
-					<img src="images/about/b-1.jpg" alt="" class="img-fluid">
-					<a href="#" class="hover-item">
-						<i class="ti-link"></i>
-					</a>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="book-item mb-4 mb-lg-0">
-					<img src="images/about/b-2.jpg" alt="" class="img-fluid">
-					<a href="#" class="hover-item">
-						<i class="ti-link"></i>
-					</a>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="book-item mb-4 mb-lg-0">
-					<img src="images/about/b-3.jpg" alt="" class="img-fluid">
-					<a href="#" class="hover-item">
-						<i class="ti-link"></i>
-					</a>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="book-item mb-4 mb-lg-0">
-					<img src="images/about/b-4.jpg" alt="" class="img-fluid">
-					<a href="#" class="hover-item">
-						<i class="ti-link"></i>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+@include('sections/additionalBooks/additionalBooks')
 
 <section class="section faq border-bottom">
 	<div class="container">
