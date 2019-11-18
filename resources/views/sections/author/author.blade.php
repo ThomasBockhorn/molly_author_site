@@ -11,10 +11,13 @@
                     <div class="author-info pl-4 mt-5 mt-lg-0">
                         <h2 class="text-lg">Molly Felder</h2>
 
-                        <p class="mb-4 mt-3">I’m a writer, English as a Second Language teacher with Magic Ears, and dog mom to the talented and brilliant Patterson A. Dog, the service dog who changed my life for the better.</p>
-                        <img src="images/about/2.png" alt="" class="img-fluid">
-
-
+                        <p class="mb-4 mt-3">I’m a writer, English as a Second Language teacher with Magic Ears,
+                            and dog mom to the talented and brilliant Patterson A. Dog, the service dog who changed my life for the better.</p>
+                        <p class="mb-4 mt-3">I received my dog through <a href="https://www.cci.org/assistance-dogs/is-a-dog-right-for-you.html">Canine Companions for Independence (CCI).</a>
+                            CCI places these incredible dogs FREE OF CHARGE! Mobility isn’t the only need the dogs help with.
+                            To see the types of dogs CCI trains and gives to recipients and explore whether an assistance dog might be right for you, visit their website.
+                            If you think you might be able to volunteer as a puppy raiser,  <a href="https://www.cci.org/get-involved/ways-to-volunteer/become-a-volunteer-puppy.html">apply here.</a>
+                        </p>
                         <div class="follow mt-5">
                             <ul class="list-inline">
                                 <li class="list-inline-item"><span class="mb-3">Follow Me :</span></li>
