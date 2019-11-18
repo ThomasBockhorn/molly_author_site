@@ -11,6 +11,9 @@
 <!--reviews-->
 @include('sections/reviews/reviews')
 
+<!--reviews2-->
+@include('sections/reviews/reviews2')
+
 <!-- About Author -->
 @include('sections/author/author')
 
@@ -62,31 +65,6 @@
 	</div>
 </section>
 
-<!-- Call to action -->
-<section class="section cta-home">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-6">
-				 <h2 class="text-lg">Start building a landing page that converts to leads.</h2>
-			</div>
-
-			<div class="col-lg-6">
-				<form action="#">
-			 		<div class="form-group">
-			 			<input type="text" class="form-control" placeholder="Full Name">
-			 		</div>
-			 		<div class="form-group">
-			 			<input type="text" class="form-control" placeholder="Enter Your email">
-			 		</div>
-
-			 		<a href="#" class="btn btn-main-2">Get free trial</a>
-			 	</form>
-
-			 	<p class="mt-3 mb-0">* Download link will be emailed to you.</p>
-			</div>
-		</div>
-	</div>
-</section>
 <section class="section faq border-bottom">
 	<div class="container">
 		<div class="row justify-content-center">
