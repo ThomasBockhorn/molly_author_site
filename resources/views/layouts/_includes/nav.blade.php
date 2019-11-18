@@ -2,10 +2,10 @@
 
     <!-- NAVBAR
     ================================================= -->
-    <div class="main-navigation fixed-top site-header border-bottom" id="mainmenu-area">
-        <nav class="navbar navbar-expand-lg ">
+    <div class="main-navigation fixed-top site-header border-bottom px-0" id="mainmenu-area">
+        <nav class="navbar navbar-expand-lg">
             <div class="container align-items-center">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand m-1" href="index.html">
                     <h2 class="mb-0"><span class="text-color">Molly Felder</h2>
                 </a>
                 <!-- Toggler -->

@@ -19,6 +19,7 @@ Version      : 1.0
 8. Author
 9. Contact
 10. Footer / #footer
+11. custom by tecktonet
 -------------------------------------------------------------------*/
 
 
@@ -969,3 +970,34 @@ CONTACT PAGE
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+
+/*---------------------------------------
+Tecktonet custom css
+----------------------------------------*/
+time {
+    display: inline-block;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(44, 141, 197);
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+time>span {
+    display: none;
+}
+
+time>.day {
+    display: block;
+    font-size: 56pt;
+    font-weight: 100;
+    line-height: 1;
+}
+
+time>.month {
+    display: block;
+    font-size: 24pt;
+    font-weight: 900;
+    line-height: 1;
+}
