@@ -2,7 +2,7 @@
 <section class="section" id="review2">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                         “As the mother of a boy with a disability, who also uses crutches, this book is amazing and exactly what we needed.
                         It's so hard to find books that helps connect to kids with disabilities - so we really loved this story and how beautifully it was illustrated.
                         - Chance's mom”
