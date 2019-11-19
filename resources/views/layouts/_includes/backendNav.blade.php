@@ -13,55 +13,32 @@
                 <div class="collapse navbar-collapse text-center text-lg-left" id="navbarmain">
                     <!-- Links -->
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item ">
-                            <a href="#banner" class="nav-link smoth-scroll">
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="#about" class="nav-link smoth-scroll">
-                                About
-                            </a>
-                        </li>
-
-                         <li class="nav-item ">
-                            <a href="#reviews" class="nav-link smoth-scroll">
-                                Reviews
-                            </a>
-                        </li>
-
-                        <li class="nav-item ">
-                            <a href="#author" class="nav-link smoth-scroll">
-                                About Me
-                            </a>
-                        </li>
-
-                        <li class="nav-item ">
-                            <a href="#additionalBooks" class="nav-link smoth-scroll">
-                                More Books
-                            </a>
-                        </li>
-
-                        <li class="nav-item ">
-                            <a href="#events" class="nav-link smoth-scroll">
-                                Events
-                            </a>
-                        </li>
-
-                        <li class="nav-item ">
-                            <a href="#contact" class="nav-link smoth-scroll">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="list-inline top-socials mb-0">
-                        <li class="list-inline-item">
-                            <a href="#"><i class="ti-facebook"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#"><i class="ti-twitter"></i></a>
-                        </li>
+                            @guest
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{ Auth::user()->name }}
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                   <a class="dropdown-item text-white bg-dark" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                           document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
                     </ul>
                 </div>
             </div>
