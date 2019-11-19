@@ -19,7 +19,10 @@
                             <span class="time">ALL DAY</span>
                         </time>
                         <div class="col-9">
-
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
                         </div>
                     </div>
                 </div>
