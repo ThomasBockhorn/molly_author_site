@@ -2,8 +2,8 @@
 
 <body id="top-header">
     @include('layouts/_includes/backendNav')
-    <main>
+    <section>
         @yield('content')
-    </main>
+    </section>
     @include('layouts/_includes/footer')
 </body>
