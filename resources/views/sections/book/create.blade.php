@@ -10,6 +10,7 @@
             <input type="text" name="title" id="title" class="form-control">
             <label for="author">Author:</label>
             <input type="text" name="author" id="author" class="form-control">
+            <input type="hidden" name="author_id" id="author_id" value="1">
             <label for="description">More Information:</label>
             <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
             <label for="image">Image:</label>
