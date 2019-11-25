@@ -33,7 +33,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{route('book.create')}}">Add a Book</a>
-                        <a class="dropdown-item" href="#">Show all Books</a>
+                        <a class="dropdown-item" href="{{route('book.index')}}">Show all Books</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">

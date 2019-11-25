@@ -53,10 +53,10 @@ class BookController extends Controller
      */
     public function index()
     {
-        $book = Books::orderBy('id', 'desc');
+        $books = Books::all();
 
         //Retrieves data and binds it to the index page
-        return view('book.index')->with('book', $book);
+        return view('sections.book.index')->with('books', $books);
     }
 
     /**
@@ -66,7 +66,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('sections/book/create');
+        return view('sections.book.create');
     }
 
     /**
@@ -85,6 +85,9 @@ class BookController extends Controller
 
         //saves the entry
         $this->book->save();
+
+        //Returns to the book index
+        return redirect()->route('sections.book.index');
     }
 
     /**
