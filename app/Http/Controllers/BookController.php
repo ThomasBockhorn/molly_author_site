@@ -104,7 +104,7 @@ class BookController extends Controller
         $oneBook = Books::findOrFail($id);
 
         //Show the view and pass the record
-        return view('book.show')->with('oneBook', $oneBook);
+        return view('sections.book.show')->with('oneBook', $oneBook);
     }
 
     /**
