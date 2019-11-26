@@ -2,9 +2,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<div class="pb-4">
+                @if(count($books) > 0)
+                <div class="pb-4">
 					<h2>Others Books by Me</h2>
-				</div>
+                </div>
+                @endif
 			</div>
 		</div>
         <div class="justify-content-center col-lg-12 d-flex">

@@ -56,6 +56,7 @@ class BookController extends Controller
         $books = Books::all();
 
         //Retrieves data and binds it to the index page
+
         return view('sections.book.index')->with('books', $books);
     }
 
@@ -84,10 +85,11 @@ class BookController extends Controller
         $this->addValue($request);
 
         //saves the entry
-        $this->book->save();
-
-        //Returns to the book index
-        return redirect()->route('sections.book.index');
+        if ($this->book->save()) {
+            return redirect()->route('book.index');
+        } else {
+            return redirect()->route('book.create');
+        }
     }
 
     /**

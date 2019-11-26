@@ -7,12 +7,12 @@
         <form method='POST' action="{{ route('book.store') }}" enctype="multipart/form-data">
             {{csrf_field()}}
             <label for="title">Book Title:</label>
-            <input type="text" name="title" id="title" class="form-control">
+            <input type="text" name="title" id="title" class="form-control" required>
             <label for="author">Author:</label>
-            <input type="text" name="author" id="author" class="form-control">
+            <input type="text" name="author" id="author" class="form-control" required>
             <input type="hidden" name="author_id" id="author_id" value="1">
             <label for="description">More Information:</label>
-            <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+            <textarea class="form-control" name="description" id="description" cols="30" rows="10" required></textarea>
             <label for="image">Image:</label>
             <input type="file" class="form-control-file" id="image" name="image">
             <br>
