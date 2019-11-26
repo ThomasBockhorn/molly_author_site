@@ -14,7 +14,7 @@
                 <div>
                     <a href="{{ route('book.show', $book->id)}}" class="btn btn-info">Further Info</a>
 
-                    <form action="{{url('book/index', [$book->id])}}" method="POST">
+                    <form action="{{url('book', [$book->id])}}" method="POST">
                         <br>
                        @csrf
                        @method('delete')

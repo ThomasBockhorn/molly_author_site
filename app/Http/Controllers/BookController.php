@@ -119,7 +119,7 @@ class BookController extends Controller
         $oneBook = Books::findOrFail($id);
 
         //Show the view and pass the record
-        return view('book.edit')->with('oneBook', $oneBook);
+        return view('sections.book.edit')->with('oneBook', $oneBook);
     }
 
     /**
@@ -135,13 +135,15 @@ class BookController extends Controller
         $this->validate($request, BookController::$rules);
 
         //Finds the record then updates it
-        $this->book->findOrFail($id);
+        $this->book = Books::findOrFail($id);
 
         //stores a new entry into the books database
         $this->addValue($request);
 
         //Saves entry
-        $this->book->save();
+        if ($this->book->save()) {
+            return redirect('book/');
+        }
     }
 
     /**
@@ -155,7 +157,9 @@ class BookController extends Controller
         //gets the data of the particular id
         $item = $this->book->findOrFail($id);
 
-        //Deletes it
-        $item->delete();
+        //Delete it then redirect
+        if ($item->delete()) {
+            return redirect('book/');
+        }
     }
 }
