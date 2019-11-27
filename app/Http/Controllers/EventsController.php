@@ -54,7 +54,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $events = Events::orderBy('id', 'desc');
+        $events = Events::all();
 
         //Retrieves data and binds it to the index page
         return view('events.index')->with('events', $events);
@@ -85,7 +85,11 @@ class EventsController extends Controller
         $this->addValue($request);
 
          //saves the entry
-        $this->event->save();
+        if ($this->event->save()) {
+            return redirect()->route('events.index');
+        } else {
+            return redirect()->route('events.create');
+        }
     }
 
     /**
@@ -131,13 +135,15 @@ class EventsController extends Controller
         $this->validate($request, EventsController::$rules);
 
         //Finds the record then updates it
-        $this->event->findOrFail($id);
+        $this->event = Events::findOrFail($id);
 
         //stores a new entry into the books database
         $this->addValue($request);
 
         //Saves entry
-        $this->event->save();
+        if ($this->event->save()) {
+            return redirect('events/');
+        }
     }
 
     /**
@@ -150,6 +156,9 @@ class EventsController extends Controller
     {
         $single_event = $this->event->findOrFail($id);
 
-        $single_event->delete();
+        //Delete it then redirect
+        if ($single_event->delete()) {
+            return redirect('events/');
+        }
     }
 }

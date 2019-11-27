@@ -23,8 +23,8 @@
                     Events
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Add an Event</a>
-                        <a class="dropdown-item" href="#">Show all Events</a>
+                        <a class="dropdown-item" href="{{route('events.create')}}">Add an Event</a>
+                        <a class="dropdown-item" href="{{route('events.index')}}">Show all Events</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">

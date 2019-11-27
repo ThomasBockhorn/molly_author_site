@@ -57,7 +57,7 @@ class BookController extends Controller
 
         //Retrieves data and binds it to the index page
 
-        return view('sections.book.index')->with('books', $books);
+        return view('book.index')->with('books', $books);
     }
 
     /**
@@ -67,7 +67,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('sections.book.create');
+        return view('book.create');
     }
 
     /**
@@ -104,7 +104,7 @@ class BookController extends Controller
         $oneBook = Books::findOrFail($id);
 
         //Show the view and pass the record
-        return view('sections.book.show')->with('oneBook', $oneBook);
+        return view('book.show')->with('oneBook', $oneBook);
     }
 
     /**
@@ -119,7 +119,7 @@ class BookController extends Controller
         $oneBook = Books::findOrFail($id);
 
         //Show the view and pass the record
-        return view('sections.book.edit')->with('oneBook', $oneBook);
+        return view('book.edit')->with('oneBook', $oneBook);
     }
 
     /**
