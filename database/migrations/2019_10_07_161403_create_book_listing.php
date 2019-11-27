@@ -16,16 +16,11 @@ class CreateBookListing extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->unsignedBigInteger('image_id')->nullable();
+            $table->string('image', 255)->nullable();
             $table->text('description');
             $table->string('author');
             $table->bigInteger('author_id');
             $table->timestamps();
-
-            $table->foreign('image_id')
-                ->references('id')
-                ->on('images')
-                ->onDelete('cascade');
         });
     }
 

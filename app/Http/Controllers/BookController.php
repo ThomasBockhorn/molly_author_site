@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Books;
+use App\Images;
 use Illuminate\Support\Facades\Storage;
 
 class BookController extends Controller
@@ -44,6 +45,7 @@ class BookController extends Controller
         $this->book->author = $request->author;
         $this->book->author_id = $request->author_id;
         $this->book->description = $request->description;
+        $this->book->image = $request->image;
     }
 
     /**
