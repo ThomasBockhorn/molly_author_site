@@ -15,8 +15,7 @@
             <label for="event_time">Event Time:</label>
             <input type="text" name="event_time" id="event_time" class="form-control" required>
             <label for="description">More Information:</label>
-            <textarea class="form-control" name="description" id="description" cols="30" rows="10" required>
-            </textarea>
+            <textarea class="form-control" name="description" id="description" cols="30" rows="10" required></textarea>
             <label for="image">Image:</label>
             <input type="file" class="form-control-file" id="image" name="image">
             <br>

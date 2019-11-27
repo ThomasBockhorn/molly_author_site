@@ -11,20 +11,25 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
+                    @foreach($events as $event)
+                    <?php
+                        $stringToDate = strtotime($event->event_date);
+                        $newDate = date('Y/m/d', $stringToDate);
+                    ?>
                     <div class="jumbotron jumbotron-fluid d-flex flex-row p-0">
-                        <time datetime="2014-07-20" class="col-3">
-                            <span class="day">4</span>
-                            <span class="month">Jul</span>
-                            <span class="year">2014</span>
-                            <span class="time">ALL DAY</span>
+                        <time datetime="{{$newDate}}" class="col-3">
+                            <span class="day"><?php echo(date('d', $stringToDate)) ?></span>
+                            <span class="month"><?php echo(date('F', $stringToDate)) ?></span>
+                            <span class="year"><?php echo(date('Y', $stringToDate)) ?></span>
+                            <span class="time">{{$event->event_time}}</span>
                         </time>
                         <div class="col-9">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                {{$event->description}}
                             </p>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>

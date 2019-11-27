@@ -11,7 +11,8 @@ class WelcomeController extends Controller
     public function index()
     {
         $books = Books::orderBy('id', 'desc')->paginate(3);
+        $events = Events::orderBy('id', 'desc')->paginate(5);
 
-        return view('index')->with('books', $books);
+        return view('index')->with('books', $books)->with('events', $events);
     }
 }

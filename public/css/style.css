@@ -1001,3 +1001,10 @@ time>.month {
     font-weight: 900;
     line-height: 1;
 }
+
+time>.year {
+    display: block;
+    font-size: 24pt;
+    font-weight: 900;
+    line-height: 1;
+}
