@@ -86,6 +86,11 @@ class BookController extends Controller
         //stores a new entry into the books database
         $this->addValue($request);
 
+        //Uploads image
+        if ($request->hasFile('image')) {
+            $this->book->image = $request->file('image')->store('images', 'public');
+        }
+
         //saves the entry
         if ($this->book->save()) {
             return redirect()->route('book.index');
@@ -139,6 +144,12 @@ class BookController extends Controller
         //Finds the record then updates it
         $this->book = Books::findOrFail($id);
 
+        //Uploads image
+        if ($request->hasFile('image')) {
+            Storage::disk('public')->delete($this->book->image);
+            $this->book->image = $request->file('image')->store('images', 'public');
+        }
+
         //stores a new entry into the books database
         $this->addValue($request);
 
@@ -157,10 +168,13 @@ class BookController extends Controller
     public function destroy($id)
     {
         //gets the data of the particular id
-        $item = $this->book->findOrFail($id);
+        $this->book = Books::findOrFail($id);
+
+        //Delete image
+        Storage::disk('public')->delete($this->book->image);
 
         //Delete it then redirect
-        if ($item->delete()) {
+        if ($this->book->delete()) {
             return redirect('book/');
         }
     }
