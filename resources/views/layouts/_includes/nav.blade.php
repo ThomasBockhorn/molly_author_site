@@ -40,17 +40,21 @@
                             </a>
                         </li>
 
+                        @if(count($books) > 0)
                         <li class="nav-item ">
                             <a href="#additionalBooks" class="nav-link smoth-scroll">
                                 More Books
                             </a>
                         </li>
+                        @endif
 
+                        @if(count($events) > 0)
                         <li class="nav-item ">
                             <a href="#events" class="nav-link smoth-scroll">
                                 Events
                             </a>
                         </li>
+                        @endif
 
                         <li class="nav-item ">
                             <a href="#contact" class="nav-link smoth-scroll">

@@ -1,4 +1,5 @@
 <section class="section border-bottom" id="events">
+        @if(count($events) > 0)
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-8">
@@ -33,4 +34,5 @@
                 </div>
             </div>
         </div>
+        @endif
     </section>

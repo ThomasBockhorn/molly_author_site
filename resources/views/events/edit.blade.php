@@ -18,8 +18,6 @@
             <label for="description">More Information:</label>
             <textarea class="form-control" name="description" id="description" cols="30" rows="10" required>{{$oneEvent->description}}
             </textarea>
-            <label for="image">Image:</label>
-            <input type="file" class="form-control-file" id="image" name="image">
             <br>
             <input type="submit" value="Submit" class="btn btn-primary">
         </form>
