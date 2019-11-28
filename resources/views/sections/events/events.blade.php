@@ -25,8 +25,12 @@
                             <span class="time">{{$event->event_time}}</span>
                         </time>
                         <div class="col-9">
+                            <h5>{{$event->event_title}}</h5>
                             <p>
                                 {{$event->description}}
+                            </p>
+                            <p>
+                                {{$event->location}}
                             </p>
                         </div>
                     </div>
