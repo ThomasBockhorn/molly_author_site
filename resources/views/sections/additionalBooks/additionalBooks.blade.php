@@ -11,12 +11,11 @@
 		</div>
         <div class="justify-content-center col-lg-12 d-flex">
             @foreach($books as $book)
-                <div class="">
-                    <div class="card m-5" style="width: 15rem;">
-                        <a href="#">
-                            <img src="{{ asset('/images/bookFront.jpg')}}" alt="" class="card-img-top">
-                            <i class="ti-link"></i>
-                        </a>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ asset('storage/'. $book->image)}}" alt="{{$book->title}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$book->title}}</h5>
+                        <p class="card-text">{{$book->description}}</p>
                     </div>
                 </div>
             @endforeach
