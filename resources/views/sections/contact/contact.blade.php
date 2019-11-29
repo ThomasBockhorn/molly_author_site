@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="col-lg-4 col-sm-12 col-md-4">
-                    <div class="contact-info-block mb-4">
+                    <div class="contact-info-block m-4">
                         <h4 class="mb-2">Email</h4>
                         <p>felder.molly@gmail.com</p>
                     </div>

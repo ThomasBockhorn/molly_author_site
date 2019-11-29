@@ -2,9 +2,9 @@
  <footer class="footer bg-dark">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 text-white">
                     <p class="footer-copy text-white-50 mb-0">
-                        &copy; Copyright <span class="current-year">Dreambuzz</span> All rights reserved-2019.
+                        Made by <a class="text-white" href="https://www.tecktonet.com">Tecktonet.com</a>
                     </p>
                 </div>
                 <div class="col-lg-6">
@@ -37,7 +37,6 @@
     <!-- Slick Slider -->
     <script src="{{ asset('css/plugins/slick-carousel/slick/slick.min.js')}}"></script>
     <script src="{{ asset('css/plugins/magnific-popup/jquery.magnific-popup.js')}}"></script>
-    <script src="js/contact.js"></script>
     <script src="{{ asset('js/theme.js')}}"></script>
 
   </body>

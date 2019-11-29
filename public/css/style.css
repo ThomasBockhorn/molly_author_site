@@ -1008,3 +1008,9 @@ time>.year {
     font-weight: 900;
     line-height: 1;
 }
+
+/** Style for additional book images**/
+#additionalBook {
+    height: 250px;
+    width: 800px;
+}

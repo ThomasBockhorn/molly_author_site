@@ -1,11 +1,11 @@
-<section class="section border-bottom" id="events">
-        @if(count($events) > 0)
+@if(count($events) > 0)
+    <section class="section border-bottom" id="events">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-8">
                    <div class="section-heading text-center">
                         <h2 class="mb-2 text-lg">Events</h2>
-                        <p>Come to our events and see me and Patterson!</p>
+                        <p>Patterson and I love school and library visits! Email me to set up an in-person or Skype/FaceTime reading.</p>
                    </div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                         $newDate = date('Y/m/d', $stringToDate);
                     ?>
                     <div class="jumbotron jumbotron-fluid d-flex flex-row p-0">
-                        <time datetime="{{$newDate}}" class="col-3">
+                        <time class="text-nowrap" datetime="{{$newDate}}" class="col-3">
                             <span class="day"><?php echo(date('d', $stringToDate)) ?></span>
                             <span class="month"><?php echo(date('F', $stringToDate)) ?></span>
                             <span class="year"><?php echo(date('Y', $stringToDate)) ?></span>
@@ -38,5 +38,5 @@
                 </div>
             </div>
         </div>
-        @endif
     </section>
+@endif
