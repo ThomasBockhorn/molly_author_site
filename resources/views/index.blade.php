@@ -23,7 +23,7 @@
 <!-- Events -->
 @include('sections/events/events')
 
-<!-- Contact -->
-@include('sections/contact/contact')
+<!--Contact-->
+@include('contactform.create')
 
 @endsection

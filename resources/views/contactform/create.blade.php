@@ -11,8 +11,9 @@
 
             <div class="row">
                 <div class="col-lg-7 col-sm-12 pr-5 col-md-8">
-                    <form class="contact__form form-row contact-form " method="post" action="mail.php" id="contactForm">
-                         <div class="row">
+                    <form class="contact__form form-row contact-form " method="post" action="/contact" id="contactForm">
+                        @csrf
+                        <div class="row">
                             <div class="col-12">
                                 <div class="alert alert-success contact__msg" style="display: none" role="alert">
                                     Your message was sent successfully.
@@ -23,18 +24,18 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name">
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name" required>
                                 </div>
                             </div>
 
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" name="email" id="email" class="form-control" placeholder="Enter Your Email Address">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your Email Address" required>
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <textarea id="message" name="message" cols="30" rows="6" class="form-control" placeholder="Your Message"></textarea>
+                                    <textarea id="message" name="message" cols="30" rows="6" class="form-control" placeholder="Your Message" required></textarea>
                                 </div>
                             </div>
                         </div>

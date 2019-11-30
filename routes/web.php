@@ -17,6 +17,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 /**
+ * This creates the route for the contact form
+ */
+Route::get('contact', 'ContactFormController@create');
+Route::post('contact', 'ContactFormController@store');
+
+/**
  * Pertains to the book/ routes
  */
 Route::resource('/book', 'BookController');
