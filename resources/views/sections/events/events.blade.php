@@ -5,7 +5,6 @@
                 <div class="col-md-12 col-lg-8">
                    <div class="section-heading text-center">
                         <h2 class="mb-2 text-lg">Events</h2>
-                        <p>Patterson and I love school and library visits! Email me to set up an in-person or Skype/FaceTime reading.</p>
                    </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
                 <div class="col-md-12 col-lg-6">
                    <div class="section-heading">
                         <h2 class="mb-2 text-lg">Contact Me</h2>
-                        <p>Contact me.  I would love to hear from you.</p>
+                        <p>Patterson and I love school and library visits! Email me to set up an in-person or Skype/FaceTime reading.</p>
                    </div>
                 </div>
             </div> <!-- / .row -->
