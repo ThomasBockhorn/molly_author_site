@@ -1,5 +1,5 @@
 <!-- Book preview -->
-<section class="" id="about">
+<section class="pb-5" id="about">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-5 col-md-6">
