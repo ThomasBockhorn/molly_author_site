@@ -21,7 +21,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-6 col-md-6">
+			<div class="col-lg-6 col-md-6 pt-5">
 				<div class="section-heading book-info mt-5 mt-lg-0 pl-4">
 					<h2 class="text-lg mb-4">About</h2>
 					<p class="lead">Henry walks with forearm crutches covered in animal stickers. At first, he loves the way the crutches make him feel. When that changes, he takes comfort in friendship and in Joel’s gift to him.
