@@ -1014,3 +1014,13 @@ time>.year {
     height: 250px;
     width: 800px;
 }
+
+/** Book front cover style**/
+#book-title {
+    width: 250px !important;
+    height: 300px !important;
+}
+
+#preview {
+    margin-bottom: 3em !important;
+}

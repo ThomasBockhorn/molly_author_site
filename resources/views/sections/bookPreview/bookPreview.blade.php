@@ -2,9 +2,9 @@
 <section class="pb-5" id="about">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-5 col-md-6">
+			<div id="preview" class="col-lg-5 col-md-6">
 				<div class="book-preview">
-					<img src="{{ asset('images/bookFront.jpg')}}" class="background-device img-fluid" alt="Henry walking">
+					<img id="book-title"  src="{{ asset('images/bookFront.jpg')}}" class="background-device img-fluid" alt="Henry walking">
 					<div class="owl-book owl-carousel owl-theme" style="opacity: 1; display: block;">
 						<div class="book-item">
 							<div class="overlay">
