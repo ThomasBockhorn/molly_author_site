@@ -17,7 +17,7 @@
             </div>
              <div class="col-lg-5 d-none d-lg-block">
                 <div class="banner-img">
-                    <img src="{{ asset('images/walk.jpg')}}" alt="Henry the Boy front cover" class="img-fluid w-100">
+                    <img src="{{ asset('images/bookFront.jpg')}}" alt="Henry the Boy front cover" class="img-fluid w-100">
                 </div>
             </div>
         </div>

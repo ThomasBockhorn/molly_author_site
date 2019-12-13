@@ -11,8 +11,13 @@
                     <div class="author-info pl-4 mt-5 mt-lg-0">
                         <h2 class="text-lg">Molly Felder</h2>
 
-                        <p class="mb-4 mt-3">I’m a writer, English as a Second Language teacher with Magic Ears,
-                            and dog mom to the talented and brilliant Patterson A. Dog, the service dog who changed my life for the better.</p>
+                        <p class="mb-4 mt-3">I’m a writer, English as a Second Language teacher,
+                            and dog mom to the talented and brilliant <a href="https://www.facebook.com/pattersonadog/"> Patterson A. Dog</a>, the service dog who changed my life for the better.</p>
+                        <div class="d-flex">
+                            <img class="img-thumbnail" style="width: 12rem"src="{{ asset('/images/elsa.jpg') }}" alt="Elsa">
+                            <p class="mb-4 mt-3 ml-2">  This is Elsa, my student is Shanghai, China.
+                                She loves Patterson too!</p>
+                        </div>
                         <p class="mb-4 mt-3">I received my dog through <a href="https://www.cci.org/assistance-dogs/is-a-dog-right-for-you.html">Canine Companions for Independence (CCI).</a>
                             CCI places these incredible dogs FREE OF CHARGE! Mobility isn’t the only need the dogs help with.
                             To see the types of dogs CCI trains and gives to recipients and explore whether an assistance dog might be right for you, visit their website.

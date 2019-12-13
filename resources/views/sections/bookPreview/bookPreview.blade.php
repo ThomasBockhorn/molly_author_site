@@ -4,7 +4,7 @@
 		<div class="row">
 			<div id="preview" class="col-lg-5 col-md-6">
 				<div class="book-preview">
-					<img id="book-title"  src="{{ asset('images/bookFront.jpg')}}" class="background-device img-fluid" alt="Henry walking">
+					<img id="book-title"  src="{{ asset('images/walk.jpg')}}" class="background-device img-fluid" alt="Henry walking">
 					<div class="owl-book owl-carousel owl-theme" style="opacity: 1; display: block;">
 						<div class="book-item">
 							<div class="overlay">
@@ -26,7 +26,8 @@
 					<h2 class="text-lg mb-4">About</h2>
 					<p class="lead">Henry walks with forearm crutches covered in animal stickers. At first, he loves the way the crutches make him feel. When that changes, he takes comfort in friendship and in Joel’s gift to him.
                         Buy the book from my wonderful small publisher,
-                        <a href="https://www.pennycandybooks.com/shop/henry-the-boy">Penny Candy Books</a>, or the all-powerful <a href="https://www.amazon.com/Henry-Boy-Molly-Felder/dp/0999658409/">Amazon!</p>
+                        <a href="https://www.pennycandybooks.com/shop/henry-the-boy">Penny Candy Books</a>, who is committed to telling unrepresented stories!  Or,
+                        if you prefer, get it from the all-powerful <a href="https://www.amazon.com/Henry-Boy-Molly-Felder/dp/0999658409/">Amazon!</p>
 				</div>
 			</div>
 		</div>
