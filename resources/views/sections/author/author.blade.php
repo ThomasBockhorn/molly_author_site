@@ -27,7 +27,7 @@
                             <ul class="list-inline">
                                 <li class="list-inline-item"><span class="mb-3">Follow Me :</span></li>
                                 <li class="list-inline-item">
-                                    <!--<a href="#"><i class="ti-facebook"></i></a>-->
+                                    <!--<a href="#"> <i class="ti-facebook"></i></a>-->
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="https://twitter.com/kidlitwithdog"><i class="ti-twitter"></i></a>
