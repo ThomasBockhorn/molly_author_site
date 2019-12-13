@@ -26,7 +26,7 @@
 					<h2 class="text-lg mb-4">About</h2>
 					<p class="lead">Henry walks with forearm crutches covered in animal stickers. At first, he loves the way the crutches make him feel. When that changes, he takes comfort in friendship and in Joel’s gift to him.
                         Buy the book from my wonderful small publisher,
-                        <a href="https://www.pennycandybooks.com/shop/henry-the-boy">Penny Candy Books</a>, who is committed to telling unrepresented stories!  Or,
+                        <a href="https://www.pennycandybooks.com/shop/henry-the-boy">Penny Candy Books</a>, who is committed to telling underrepresented stories!  Or,
                         if you prefer, get it from the all-powerful <a href="https://www.amazon.com/Henry-Boy-Molly-Felder/dp/0999658409/">Amazon!</p>
 				</div>
 			</div>

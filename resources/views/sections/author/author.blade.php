@@ -15,7 +15,7 @@
                             and dog mom to the talented and brilliant <a href="https://www.facebook.com/pattersonadog/"> Patterson A. Dog</a>, the service dog who changed my life for the better.</p>
                         <div class="d-flex">
                             <img class="img-thumbnail" style="width: 12rem"src="{{ asset('/images/elsa.jpg') }}" alt="Elsa">
-                            <p class="mb-4 mt-3 ml-2">  This is Elsa, my student is Shanghai, China.
+                            <p class="mb-4 mt-3 ml-2">  This is Elsa, my student in Shanghai, China.
                                 She loves Patterson too!</p>
                         </div>
                         <p class="mb-4 mt-3">I received my dog through <a href="https://www.cci.org/assistance-dogs/is-a-dog-right-for-you.html">Canine Companions for Independence (CCI).</a>
