@@ -14,7 +14,7 @@
                         <p class="mb-4 mt-3">I’m a writer, English as a Second Language teacher,
                             and dog mom to the talented and brilliant <a href="https://www.facebook.com/pattersonadog/"> Patterson A. Dog</a>, the service dog who changed my life for the better.</p>
                         <div class="d-flex">
-                            <img class="img-thumbnail" style="width: 200px" style="height: 200px"src="{{ asset('/images/elsa.jpg') }}" alt="Elsa">
+                            <img id="elsa" class="img-thumbnail" src="{{ asset('/images/elsa.jpg') }}" alt="Elsa">
                             <p class="mb-4 mt-3 ml-2">  This is Elsa, my student in Shanghai, China.
                                 She loves Patterson too!</p>
                         </div>

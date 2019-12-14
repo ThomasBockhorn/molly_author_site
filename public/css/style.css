@@ -1024,3 +1024,9 @@ time>.year {
 #preview {
     margin-bottom: 3em !important;
 }
+
+/**Adding styling to else Image**/
+#elsa {
+    width: 200px;
+    height: 200px;
+}
