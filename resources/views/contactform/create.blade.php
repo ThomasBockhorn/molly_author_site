@@ -13,13 +13,6 @@
                 <div class="col-lg-7 col-sm-12 pr-5 col-md-8">
                     <form class="contact__form form-row contact-form " method="post" action="/contact" id="contactForm">
                         @csrf
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                                    Your message was sent successfully.
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="row">
                             <div class="col-lg-6">
