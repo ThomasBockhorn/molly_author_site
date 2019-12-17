@@ -11,7 +11,7 @@
 
   <meta name="author" content="Molly Felder">
 
-  <title>Molly Felder Author</title>
+  <title>Molly Felder, Author</title>
 
  <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
