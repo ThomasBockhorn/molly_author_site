@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Influencer - Book landing template">
+  <meta name="description" content="Children's book author">
   <meta name="keywords" content="Henry the Boy, Molly Felder, author, disability, friendship">
 
   <meta name="author" content="Molly Felder">
