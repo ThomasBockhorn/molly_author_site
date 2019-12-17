@@ -20,7 +20,7 @@
                         </div>
                         <p class="mb-4 mt-3">I received my dog through <a href="https://www.cci.org/assistance-dogs/is-a-dog-right-for-you.html">Canine Companions for Independence (CCI).</a>
                             CCI places these incredible dogs FREE OF CHARGE! Mobility isn’t the only need the dogs help with.
-                            To see the types of dogs CCI trains and gives to recipients and explore whether an assistance dog might be right for you, visit their website.
+                            To see the types of dogs CCI trains and gives to recipients and explore whether an assistance dog might be right for you, visit their  <a href="https://www.cci.org/get-involved/ways-to-volunteer/become-a-volunteer-puppy.html">website.</a>
                             If you think you might be able to volunteer as a puppy raiser,  <a href="https://www.cci.org/get-involved/ways-to-volunteer/become-a-volunteer-puppy.html">apply here.</a>
                         </p>
                         <div class="follow mt-5">
